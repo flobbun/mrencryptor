@@ -1,0 +1,54 @@
+$c1: #ccc;
+
+#intro{
+    display: grid;
+    width: 100vw;
+    margin: auto;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    .h2{
+        font-size: 40px;
+    }
+
+    button{
+        width: 20%;
+        height: 8%;
+        margin: 24px auto;
+    }
+}
+
+#encryptor{
+    display: grid;
+    grid-template-rows: repeat(3, 10%);
+    width: 100vw;
+    margin: 0 auto;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    .modes{
+        align-self: center;
+    }
+
+    .encrypt{
+        width: 80vw;
+        height: 40vh;
+        margin: 0 auto;
+    }
+
+    input[type=text], .textarea{
+        border: 1px outset $c1;
+        border-radius: 2px;
+        padding: 4px;
+    }
+
+    .textarea{
+        margin: 0 auto;
+        height: 50%;
+        width: 50%;
+    }
+    .textarea:empty:not(:focus):before{
+        content:attr(data-text);
+        color: rgba(204, 204, 204, 0.411);
+    }
+}

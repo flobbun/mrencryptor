@@ -1,0 +1,67 @@
+$c1: #ccc;
+
+$font1: 'Noto Sans Mono', monospace;
+$font2: 'Ultra', serif;
+
+#header{
+    display: grid;
+    grid-template-columns: 100vw;
+    column-gap: 4px;
+    height: 30vh;
+    justify-self: center;
+    padding: 4px;
+
+    .logo{
+        position: absolute;
+        left: 4%;
+        justify-content: center;
+        align-self: flex-start;
+        h1{
+            cursor: pointer;
+            letter-spacing: 4px;
+            text-shadow: 3px 3px 1px #000;
+        }
+    }
+
+    nav{
+        display: grid;
+        align-content: center;
+        align-self: center;
+        margin-top: 20px;
+        ul{
+            display: grid;
+            grid-template-columns: repeat(3, 20%);
+            justify-items: center;
+            justify-content: center;
+            a{
+                padding: 4px;
+                text-align: center;
+                border: 0.4px outset $c1;
+                transition-duration: 0.6s;
+                &:hover{
+                    border-top-right-radius: 0;
+                    border-bottom-left-radius: 0;
+                    border-top-left-radius: 6px;
+                    border-bottom-right-radius: 6px;
+                    background: $c1;
+                    border-color: #000;
+                    color: #000;
+                }
+            }
+        }
+    }
+}
+
+#footer{
+    margin-top: 20px;
+    box-shadow: -10px -10px 10px 0.1px rgba(175, 173, 173, 0.096); 
+    color: $c1;
+    text-align: center;
+    padding: 4px;
+    p{
+        font-size: 14px;
+    }
+    small{
+        font-size: 12px;
+    }
+}

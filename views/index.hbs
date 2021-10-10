@@ -1,0 +1,46 @@
+<div id="main">
+
+    <section class="container" id="intro">
+        <div>
+            <p class="h2">Hey! I'm <b>Mr.Encryptor</b>, let me introduce my self...</p>
+            <p class="info">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                Doloremque, delectus!
+            </p>
+
+            <button class="info btn">
+                <a href="#encryptor">I want to use it!</a>
+            </button>
+        </div>
+    </section>
+
+    <section class="container" id="encryptor">
+
+        <div class="modes">
+            <label for="protocols">Protocol</label>
+            <select class="btn" name="protocols">
+                <option value="1">ec00</option>
+                <option value="2">ec00Key</option>
+                <option value="3">ec</option>
+                <option value="ecMAC">ecMAC</option>
+            </select>
+            <label for="type"></label>
+            <select class="btn" name="type">
+                <option value="encrypt">Encrypt</option>
+                <option value="decrypt">Decrypt</option>
+            </select>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="encrypt"> 
+            <form method="post" action="/encrypt">
+                <input class="btn" type="text" placeholder="Input..." name="cinput">
+                <button class="btn">➪</button>
+            </form>
+            <div class="separator"></div>
+            <div data-text="Output..." class="textarea"></div>
+        </div>        
+    </section>
+
+</div>

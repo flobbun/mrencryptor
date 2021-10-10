@@ -1,0 +1,107 @@
+body {
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  background-image: url("../img/bg2.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+body button, body input, body .textarea, body select, body option {
+  outline: none;
+  border: none;
+  background: none;
+}
+body li {
+  list-style: none;
+}
+body a, body a:visited {
+  text-decoration: none;
+  color: #ccc;
+}
+
+#superContainer {
+  background: #050411;
+  background: linear-gradient(90deg, rgba(5, 4, 17, 0.9612219888) 1%, rgba(3, 3, 15, 0.8491771709) 36%, rgba(5, 15, 17, 0.731530112) 89%);
+  width: 100vw;
+}
+
+.container {
+  height: 100vh;
+  padding: 4px;
+}
+
+.borderstyle1 {
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.borderstyle2 {
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.btn {
+  cursor: pointer;
+  font-weight: bold;
+  padding: 4px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition-duration: 0.4s;
+}
+.btn:hover {
+  background: #ccc;
+  border-color: rgba(0, 0, 0, 0.425);
+  color: #222;
+}
+.btn:hover a {
+  color: #222;
+}
+
+.separator {
+  margin: 10px auto;
+  height: 2px;
+  width: 80%;
+  border-top: 1px outset rgba(255, 255, 255, 0.24);
+  border-radius: 50%;
+}
+
+h1 {
+  font-family: "Ultra", serif;
+}
+
+.h1, .h2, .h3, .h4, p, label, .textarea,
+input, button, select {
+  color: #ccc;
+  font-family: "Noto Sans Mono", monospace;
+}
+
+.h1 {
+  font-size: 40px;
+}
+
+.h2 {
+  font-size: 28px;
+}
+
+.h3 {
+  font-size: 24px;
+}
+
+.h4 {
+  font-size: 20px;
+}
+
+.info {
+  font-family: "Noto Sans Mono", monospace;
+  font-size: 18px;
+  color: #ccc;
+}
+
+/*# sourceMappingURL=layout.css.map */

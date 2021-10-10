@@ -1,0 +1,50 @@
+#intro {
+  display: grid;
+  width: 100vw;
+  margin: auto;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+}
+#intro .h2 {
+  font-size: 40px;
+}
+#intro button {
+  width: 20%;
+  height: 8%;
+  margin: 24px auto;
+}
+
+#encryptor {
+  display: grid;
+  grid-template-rows: repeat(3, 10%);
+  width: 100vw;
+  margin: 0 auto;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+}
+#encryptor .modes {
+  align-self: center;
+}
+#encryptor .encrypt {
+  width: 80vw;
+  height: 40vh;
+  margin: 0 auto;
+}
+#encryptor input[type=text], #encryptor .textarea {
+  border: 1px outset #ccc;
+  border-radius: 2px;
+  padding: 4px;
+}
+#encryptor .textarea {
+  margin: 0 auto;
+  height: 50%;
+  width: 50%;
+}
+#encryptor .textarea:empty:not(:focus):before {
+  content: attr(data-text);
+  color: rgba(204, 204, 204, 0.411);
+}
+
+/*# sourceMappingURL=encryptor.css.map */
