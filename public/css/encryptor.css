@@ -12,6 +12,8 @@
 #intro button {
   width: 20%;
   height: 8%;
+  box-sizing: content-box;
+  overflow: hidden;
   margin: 24px auto;
 }
 
@@ -24,7 +26,7 @@
   justify-self: center;
   text-align: center;
 }
-#encryptor .modes {
+#encryptor .options {
   align-self: center;
 }
 #encryptor .encrypt {
@@ -38,13 +40,34 @@
   padding: 4px;
 }
 #encryptor .textarea {
+  word-wrap: break-word;
+  overflow-y: auto;
+  overflow-x: hidden;
   margin: 0 auto;
   height: 50%;
   width: 50%;
+  padding: 8px;
 }
 #encryptor .textarea:empty:not(:focus):before {
   content: attr(data-text);
   color: rgba(204, 204, 204, 0.411);
+}
+#encryptor #copyOutput {
+  position: absolute;
+  top: 181%;
+  left: 69%;
+  width: calc(1.6rem + 1.5vw);
+  height: 14vh;
+  transition-duration: 0.2s;
+}
+#encryptor #copyOutput img {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(145deg) brightness(106%) contrast(104%) drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.671));
+}
+#encryptor #copyOutput:hover {
+  transform: scale(1.1);
 }
 
 /*# sourceMappingURL=encryptor.css.map */

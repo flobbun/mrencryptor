@@ -2,44 +2,52 @@
 
     <section class="container" id="intro">
         <div>
-            <p class="h2">Hey! I'm <b>Mr.Encryptor</b>, let me introduce my self...</p>
+            <p class="h2">Hey! I'm <b>Mr.Encryptor</b>, let me introduce myself...</p>
             <p class="info">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                 Doloremque, delectus!
             </p>
 
             <button class="info btn">
-                <a href="#encryptor">I want to use it!</a>
+                <a class="h4" href="#encryptor">I want to use it!</a>
             </button>
         </div>
     </section>
 
     <section class="container" id="encryptor">
 
-        <div class="modes">
+        <div class="options">
             <label for="protocols">Protocol</label>
-            <select class="btn" name="protocols">
-                <option value="1">ec00</option>
-                <option value="2">ec00Key</option>
-                <option value="3">ec</option>
-                <option value="ecMAC">ecMAC</option>
+            <select id="protocols" class="btn" name="protocols">
+                <option>ec</option>
+                <option>ec00</option>
+                <option>ec01</option>
+                <option>ecMAC</option>
             </select>
-            <label for="type"></label>
-            <select class="btn" name="type">
+            <label for="modes"></label>
+            <select id="modes" class="btn" name="modes">
                 <option value="encrypt">Encrypt</option>
                 <option value="decrypt">Decrypt</option>
             </select>
+            <div>
+                <label for="iterations">Iterations</label>
+                <input value="1" class="btn" id="iterations"type="number" name="iterations" id="iterations" min="1" max="4">
+            </div>
         </div>
 
         <div class="separator"></div>
 
-        <div class="encrypt"> 
+        <div class="encrypt">
             <form method="post" action="/encrypt">
-                <input class="btn" type="text" placeholder="Input..." name="cinput">
-                <button class="btn">➪</button>
+                <input class="btn" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+                id="cinput" type="text" placeholder="Input..." name="cinput">
+                <button type="button" id="btnEncrypt" class="btn">➪</button>
             </form>
             <div class="separator"></div>
-            <div data-text="Output..." class="textarea"></div>
+            <div id="coutput" data-text="Output..." class="textarea"></div>
+            <button data-clipboard-target="#coutput" id="copyOutput">
+                <img title="Copy to clipboard" src="img/copy.svg" alt="Copy to clipboard">
+            </button>
         </div>        
     </section>
 
