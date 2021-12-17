@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const auth = express.Router();
 const {ef, df, iterate} = require('../funcs.js');
 const gData = { title: 'Mr.Encryptor' };
 

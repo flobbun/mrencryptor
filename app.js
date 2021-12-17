@@ -4,10 +4,16 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
+const authRoutes = require('./routes/auth');
 const app = express();
 const hbs = require('express-handlebars');
+const { initializeApp, applicationDefault } = require('firebase-admin/app');
+const credentials = require('./cc.json');
 
+initializeApp({
+  credential: applicationDefault(credentials),
+  databaseURL: 'https://<DATABASE_NAME>.firebaseio.com'
+});
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', path.join(__dirname, 'views'));
@@ -23,7 +29,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/auth', authRoutes);
 
 app.use(function(req, res, next) {
   next(createError(404));

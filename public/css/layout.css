@@ -24,7 +24,6 @@ body a, body a:visited {
 #superContainer {
   background: #050411;
   background: linear-gradient(90deg, rgba(5, 4, 17, 0.9612219888) 1%, rgba(3, 3, 15, 0.8491771709) 36%, rgba(5, 15, 17, 0.731530112) 89%);
-  width: 100vw;
 }
 
 .container {

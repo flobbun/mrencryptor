@@ -22,7 +22,9 @@ body {
 #superContainer{
   background: rgb(5,4,17);
   background: linear-gradient(90deg, rgba(5,4,17,0.9612219887955182) 1%, rgba(3,3,15,0.8491771708683473) 36%, rgba(5,15,17,0.7315301120448179) 89%);
-  width: 100vw;
+  // width: 100vw;
+  // display: flexbox;
+  // flex-wrap: wrap;
 }
 
 .container{

@@ -28,6 +28,29 @@ async function encryption(){
 }
 
 btnEncrypt.addEventListener("click", () => {
-   if(cinput.value != '')
+    if(cinput.value != '' && cinput.value.length < 24000)
         encryption();
+    else
+        coutput.innerHTML = '';
+    cinput.value = '';
+});
+
+//Crash protection
+let canAlert = true;
+const alertDelay = 5000;
+
+cinput.addEventListener('keydown', () => {
+    if (cinput.value.length > 21000 && cinput.value.length < 22000)
+        if (canAlert)
+        {
+            alert("Warning, so many characters can affect app performance.");
+            canAlert = false;
+            setTimeout(() => canAlert = true, alertDelay);
+        }
+    if (cinput.value.length >= 23999)
+    {
+        cinput.value = '';
+        coutput.innerHTML = '';
+        alert("Sorry, we deleted the text to prevent the app from crashing.");
+    }
 });
