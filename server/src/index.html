@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- METATAGS -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr.Encryptor</title>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&family=Ultra&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/lib.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <h1 class="h1">
+                <a href="/">Mr.Encryptor</a>
+            </h1>
+        </div>
+        <nav>
+            <ul>
+                <a class="h4" href="/security">Security</a>
+                <a class="h4" href="/contact">Contact</a>
+                <a class="h4" href="/signup">Sign up</a>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+
+        <section>
+            <div>
+                <p class="h2">Hey! I'm <b>Mr.Encryptor</b>, let me introduce myself...</p>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                    Doloremque, delectus!
+                </p>
+    
+                <button class="btn">
+                    <a class="h4" href="#encryptor">I want to use it!</a>
+                </button>
+            </div>
+        </section>
+    
+        <section>
+            <div class="options">
+                <label for="protocols">Protocol</label>
+                <select id="protocols" class="btn" name="protocols">
+                    <option>ec</option>
+                    <option>ec00</option>
+                    <option>ec01</option>
+                    <option>ecMAC</option>
+                </select>
+                <label for="modes"></label>
+                <select id="modes" class="btn" name="modes">
+                    <option value="encrypt">Encrypt</option>
+                    <option value="decrypt">Decrypt</option>
+                </select>
+                <div>
+                    <label for="iterations">Iterations</label>
+                    <input value="1" class="btn" id="iterations"type="number" name="iterations" id="iterations" min="1" max="4">
+                </div>
+            </div>
+    
+            <div class="separator"></div>
+    
+            <div class="encrypt">
+                <form method="post" action="/encrypt">
+                    <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+                    id="cinput" type="text" placeholder="Input..." name="cinput">
+                    <button type="button" id="btnEncrypt" class="btn">➪</button>
+                </form>
+                <div class="separator"></div>
+                <div id="coutput" data-text="Output..." class="textarea"></div>
+                <button data-clipboard-target="#coutput" id="copyOutput">
+                    <img title="Copy to clipboard" src="img/copy.svg" alt="Copy to clipboard">
+                </button>
+            </div>
+        </section>
+    
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <p>This is a creation of <b>Jhon Aguiar</b>.</p>
+        <small>Thanks for using it!</small>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+</body>
+</html>
