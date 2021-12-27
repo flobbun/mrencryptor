@@ -8,7 +8,7 @@ async function main() {
 
     //Route
     app.get('/', (req, res) => {
-        res.sendFile(__dirname + '/index.html');
+        res.send('Working');
     });
 }
 

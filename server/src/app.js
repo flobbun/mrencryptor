@@ -6,7 +6,6 @@ const app = express();
 app.set('port', process.env.PORT || 3000);
 
 // Middlewares
-app.use(express.static('public'));
 app.use(cors());
 app.use(express.json());
 
