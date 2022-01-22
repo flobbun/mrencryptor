@@ -6,16 +6,18 @@ import Presentation from './components/Presentation';
 import Security from './components/pages/Security';
 import Contact from './components/pages/Contact';
 import Signup from './components/pages/Signup';
+import bgVideo from './assets/bg.mp4';
 
 const firstPage = () =>
-<main>
+<>
   <Presentation></Presentation>
   <Encryptor></Encryptor>
-</main>;
+</>;
 
 function App() {
   return (
-    <div className='fadein grid bgimg bg-norepeat bg-fixed bg-cover'>
+    <div className='fadein grid'>
+    <video id='bgvideo' autoPlay={true} loop={true} muted={true} src={bgVideo}></video>
       <Router>
       <Header/>
         <Routes>

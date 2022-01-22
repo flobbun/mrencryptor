@@ -1,15 +1,3 @@
-li{list-style: none;}
-a, a:visited{text-decoration: none;}
-button, input, select{border: none; background: none; cursor: pointer; outline: none;}
-
-body{
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    padding: 0;
-    margin: 0;
-}
 body::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -30,20 +18,49 @@ body::-webkit-scrollbar-track {
 section{height: 100vh;}
 footer{margin-top: 30vh;}
 
-#coutput{cursor: text;}
+#bgvideo{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#coutput{
+    cursor: text;
+    transition-duration: 0.2s;
+}
+
+#coutput:not(:empty){
+    padding: 10px;
+    word-break: break-all;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
+
+#coutput:not(:empty)::-webkit-scrollbar{
+    width: 8px;
+    background: rgba(34, 34, 34, 0.493);
+}
+#coutput:not(:empty)::-webkit-scrollbar-thumb{
+    width: 8px;
+    background: rgba(11, 109, 238, 0.493);
+}
+
 #coutput:empty:not(:focus):before{
     content: attr(data-text);
     color: rgba(17, 16, 16, 0.411);
 }
 
-.bgimg{background-image: url("../../assets/img/bg.jpg");}
+/* .bgimg{background-image: url("../../assets/img/bg.jpg");} */
 .bgwave-white{background-image: url("../../assets/img/wave-white.svg");}
 .bgwave-white-up{background-image: url("../../assets/img/wave-white-up.svg");}
 .bgwave-black{background-image: url("../../assets/img/wave-black.svg");}
 .bgwave-black-up{background-image: url("../../assets/img/wave-black-up.svg");}
 
 .separator{
-    margin: 4rem;
+    margin: 10px;
     height: 1%;
     width: 85vw;
     border-radius: 50%;
@@ -61,5 +78,21 @@ footer{margin-top: 30vh;}
     }
     100%{
         box-shadow: 1px 1px 9px 3px rgba(0, 183, 255, 0);
+    }
+}
+
+@keyframes minimize {
+    0%{
+        height: 100%;
+        opacity: 100%;
+    }
+    45%{
+        opacity: 10%;
+    }
+    100%{
+        opacity: 0%;
+        height: 0;
+        visibility: hidden;
+        display: none;
     }
 }

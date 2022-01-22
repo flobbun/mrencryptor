@@ -1,3 +1,41 @@
+/* RESET */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*{box-sizing: border-box;}
+
 /* Variables */
 :root {
     /*Fonts*/
@@ -73,6 +111,9 @@
 .cgap-2{column-gap: 2px;}
 .cgap-4{column-gap: 4px;}
 .cgap-6{column-gap: 6px;}
+.cgap-8{column-gap: 8px;}
+.cgap-10{column-gap: 10px;}
+.cgap-12{column-gap: 12px;}
 
 .rgap-2{row-gap: 2px;}
 .rgap-4{row-gap: 4px;}
@@ -154,6 +195,8 @@
 .p-4{padding: 4px;}
 .p-6{padding: 6px;}
 .p-8{padding: 8px;}
+.p-10{padding: 10px;}
+.p-12{padding: 12px;}
 
 /* Border radius */
 .bradius-4{border-radius: 4px;}
@@ -257,8 +300,17 @@
 .vh20 {height: 20vh;}
 .vh10 {height: 10vh;}
 
+/* Z-Index */
+.z--1{z-index: -1;}
+.z-0{z-index: 0;}
+.z-1{z-index: 1;}
+.z-2{z-index: 2;}
+
 /* Overflows */
 .overflow-hidden{overflow: hidden;}
+.overflow-auto{overflow: auto;}
+.overflow-hidden-y{overflow-y: hidden;}
+.overflow-hidden-x{overflow-x: hidden;}
 
 /* Test */
 .test{border: 5px solid rgb(255, 0, 0);}
@@ -267,4 +319,9 @@
 @keyframes fadein {
     from {opacity: 0;}
     to {opacity: 1;}
+}
+
+@keyframes fadeout {
+    from {opacity: 1;}
+    to {opacity: 0;}
 }
